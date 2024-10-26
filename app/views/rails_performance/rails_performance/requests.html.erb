@@ -1,6 +1,13 @@
 <div class="card">
   <div class="card-content">
-    <h2 class="subtitle">Requests (path, total number, average response time)</h2>
+    <div class="columns is-vcentered">
+      <div class="column">
+        <h2 class="subtitle">Requests (path, total number, average response time)</h2>
+            <%= link_to request.original_url + '.csv', class: 'icon download_icon' do %>
+              <%= icon('download') %>
+            <% end %>
+      </div>
+    </div>
     <table class="table is-fullwidth is-hoverable is-narrow">
       <thead>
         <tr>
